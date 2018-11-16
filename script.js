@@ -1,18 +1,8 @@
 
-function fib(n) {
-	let first = 1;
-	let second = 1;
-	let third = 0;
-	let i = 0;
-	console.log(first);
-	console.log(second);
-	while (i < n) {
-		third = first + second;
-		first = second;
-		second = third;
-		console.log(third);
-		i++;
-	}
+function fib(n){
+  if ( n == 0 ) return 0; 
+  if (n == 1) return 1;
+  return fib(n-2) + fib(n-1);
 }
+console.log(fib(10));
 
-fib(5);
